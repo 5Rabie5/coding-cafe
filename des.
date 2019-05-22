@@ -1,0 +1,31 @@
+//-------Cashier
+//Add annotations to Microservices//
+//Create Database//
+//Create configuration .yml//
+//Persistence
+//  Domain//
+        //Invoice//
+            // id//
+            // uuid//
+//    RepositoryInterface//
+//Communication
+    // Maybe ProductDTO (to send to Barista)//
+        // ticketUUID//
+        // String nameOfProduct  (Barista will add the timestamp on arrival)//
+    // PurchaseDTO (will go to Pickup)//
+        // List<Product> ?? List<String> productNames//
+        // ticketUUID//
+    //    Endpoint to display the List<Product>
+    //    Endpoint to receive a an Order(List<String>)
+//Logic
+//    Accountant
+    //    Create invoice
+    //    Store invoice in DB
+//    OrderManager
+    //    Send ProductDTO to correct place
+    //    Send PurchaseDTO to Pickup
+//Check annotations to Microservices
+Collapse
+
+
+

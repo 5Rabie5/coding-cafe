@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/cashier-invoice?useSSL=false
+    username: r5user
+    password: nacs
+  jpa:
+    hibernate:
+      ddl-auto: update
