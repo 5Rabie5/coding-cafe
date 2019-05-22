@@ -2,9 +2,7 @@ package at.nacs.cashier.communication;
 
 import at.nacs.cashier.logic.ProductManager;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,6 +16,12 @@ public class CashierEndpoint {
   @GetMapping
   List<String> display(){
     return productManager.displayAll();
+  }
+
+  @PostMapping
+  List<String> order(@RequestBody String[] orders){
+    List<String> order =  List.of(orders);
+    return order;
   }
 
 }

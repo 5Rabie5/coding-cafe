@@ -6,8 +6,9 @@ import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+import static javax.persistence.FetchType.EAGER;
 
 @Entity
 @Data
@@ -20,7 +21,8 @@ public class Invoice {
   private String uuid;
   private LocalDateTime timestamp;
 
-  @ElementCollection
-  private List<String> orders = new ArrayList<>();
+@ElementCollection(fetch = EAGER)
+private List<String> orders = new ArrayList<>();
+
   private Double total;
 }
