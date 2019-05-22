@@ -6,12 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.UUID;
 
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Purchase {
-  private String ticketUUID;
+  private UUID ticketUUID;
   private List<String> productNames;
 }

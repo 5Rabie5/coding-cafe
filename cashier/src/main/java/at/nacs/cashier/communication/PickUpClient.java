@@ -1,16 +1,17 @@
 package at.nacs.cashier.communication;
 
 import at.nacs.cashier.dto.Product;
+import at.nacs.cashier.dto.Purchase;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
-//@FeignClient("barista")
+//@FeignClient("pickup")
 //@RefreshScope
-public interface BaristClient {
+public interface PickUpClient {
 
-  @PostMapping("/barista")
-  boolean sendNewOrder(Product product);
+  @PostMapping("/pickup")
+  void sendNewOrder(Purchase purchase);
 
 }
 
